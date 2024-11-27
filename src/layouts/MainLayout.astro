@@ -1,17 +1,37 @@
 ---
-import "../styles/global.css";
-const { title } = Astro.props;
+//  **********  /astro-jquery-pruebas/  *****************
+//  **********  /src/layouts/MainLayout.astro  **********
+
+import { ViewTransitions } from 'astro:transitions';
+import '../styles/global.css';
+
+const { favicon, title } = Astro.props;
 ---
 
+<!-- **********  MainLayout.astro  ********** -->
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-  </head>
-  <body>
-    <slot />
-  </body>
+    <head>
+        <meta charset="utf-8" />
+
+        <link
+            rel="icon"
+            type="image/svg+xml"
+            href={favicon || '/favicon.svg'}
+        />
+
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        ></script>
+
+        <title>{title}</title>
+
+        <ViewTransitions />
+    </head>
+
+    <body>
+        <slot />
+    </body>
 </html>
