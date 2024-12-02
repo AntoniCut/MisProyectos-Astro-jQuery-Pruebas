@@ -22,9 +22,18 @@ const { favicon, title } = Astro.props;
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
 
-        <script
-            src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"
-        ></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"> </script> -->
+
+        <script>
+            import { jQueryGaleria } from '../scripts/galeria';
+
+            //  DOMContentLoaded
+            //  transitionend
+            
+            document.addEventListener('DOMContentLoaded', () => {
+                jQueryGaleria();
+            });
+        </script>
 
         <title>{title}</title>
 

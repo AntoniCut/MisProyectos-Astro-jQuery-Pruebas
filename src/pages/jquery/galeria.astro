@@ -1,10 +1,26 @@
 ---
+
 import MainLayout from "../../layouts/MainLayout.astro";
 import "../../styles/jquery/galeria.css";
 
+const props = {
+  title: "Página dinámica",
+  favicon: "/jquery-icono-32px.ico", // Ruta al favicon dinámico
+};
+
 ---
 
-<MainLayout title="Galeria con jQuery">
+
+<script>
+
+    import { jQueryGaleria } from "../../scripts/jQueryGaleria";
+    document.addEventListener('astro:page-load', jQueryGaleria);
+   
+
+</script>
+
+
+<MainLayout favicon={props.favicon} title="Galeria con jQuery">
     
     <head>
         <link rel="icon" type="image/svg+xml" href="/astro-logo-svg.svg" />
@@ -52,7 +68,5 @@ import "../../styles/jquery/galeria.css";
             </footer>
         </section>
     </main>
-
-    <script src="../../../src/scripts/galeria.js"> </script>
 
 </MainLayout>

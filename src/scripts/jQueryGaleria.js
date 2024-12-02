@@ -1,12 +1,15 @@
-//  ************************************************************************************************************************************************  
-//  **********  /01-todo-jquery-de-novato-a-experto/02-jquery-ejercicios-ejemplos/seccion09-crea-galeria-jquery/46-galeria/js/galeria.js  **********  
-//  ************************************************************************************************************************************************  
+//  ****************************************************************************  
+//  **********  /astro-jquery-pruebas/src/scripts/jQueryGaleria.jsjs  **********  
+//  ****************************************************************************  
 
 
-document.addEventListener('DOMContentLoaded', () => {
+import $ from 'jquery';
+import 'astro-jquery';
 
+export const jQueryGaleria = () => {
 
-    console.warn('----------  Documento Cargado!!!  ----- ', 'CDN Google - jQuery version:', $.fn.jquery, ' ----------', '\n');
+    //console.warn('----------  Documento Cargado!!!  ----- ', 'CDN Google - jQuery version:', $.fn.jquery, ' ----------', '\n');
+    console.warn('----------  Documento Cargado!!!  ----- ', 'jQuery version:', $.fn.jquery, ' ----------', '\n');
 
     //  -----  Declaración de Variables  -----
     let fotoActual = 1;
@@ -101,5 +104,4 @@ document.addEventListener('DOMContentLoaded', () => {
         //  -----  Cambiamos el Texto de la Foto  -----
         $texto.text(textos[fotoActual - 1]);
     }
-
-});
+}
