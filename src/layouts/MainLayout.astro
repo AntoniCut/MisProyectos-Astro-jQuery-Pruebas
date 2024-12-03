@@ -1,14 +1,22 @@
 ---
-//  **********  /astro-jquery-pruebas/  *****************
-//  **********  /src/layouts/MainLayout.astro  **********
+
+
+//  ------------------------------------------------------
+//  ----------  /astro-jquery-pruebas  -------------------
+//  ----------  /src/layouts/MainLayouts.astro  ----------
+//  ------------------------------------------------------
+
 
 import { ViewTransitions } from 'astro:transitions';
 import '../styles/global.css';
 
+
 const { favicon, title } = Astro.props;
+
+
 ---
 
-<!-- **********  MainLayout.astro  ********** -->
+
 <html lang="es">
     <head>
         <meta charset="utf-8" />
@@ -23,24 +31,17 @@ const { favicon, title } = Astro.props;
         <meta name="generator" content={Astro.generator} />
 
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"> </script> -->
-
-        <script>
-            import { jQueryGaleria } from '../scripts/galeria';
-
-            //  DOMContentLoaded
-            //  transitionend
-            
-            document.addEventListener('DOMContentLoaded', () => {
-                jQueryGaleria();
-            });
-        </script>
-
+        
         <title>{title}</title>
 
         <ViewTransitions />
+        
     </head>
 
     <body>
+        
         <slot />
+
     </body>
+
 </html>

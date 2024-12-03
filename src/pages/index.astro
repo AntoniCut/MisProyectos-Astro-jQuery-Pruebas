@@ -1,16 +1,26 @@
 ---
+
+
+//  ----------------------------------------------
+//  ----------  /astro-jquery-pruebas  -----------
+//  ----------  /src/pages/index.astro  ----------
+//  ----------------------------------------------
+
+
 import MainLayout from "../layouts/MainLayout.astro";
+
 
 const props = {
   title: "Página dinámica",
   favicon: "/astro-logo-svg.svg", // Ruta al favicon dinámico
 };
 
+
 ---
 
 <MainLayout favicon={props.favicon} title="Astro & jQuery - Pruebas">
 
     <h1> Astro & jQuery </h1>
-    <a href="./jquery/galeria"> Galeria jQuery </a>
+    <a href="./galeria"> Galeria jQuery </a>
 
 </MainLayout>

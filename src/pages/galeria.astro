@@ -1,0 +1,33 @@
+---
+
+
+//  ------------------------------------------------
+//  ----------  /astro-jquery-pruebas  -------------
+//  ----------  /src/pages/galeria.astro  ----------
+//  ------------------------------------------------
+
+
+import MainLayout from "../layouts/MainLayout.astro";
+import GaleriaComponent from "../components/GaleriaComponent.astro";
+
+
+const props = {
+  title: "Página dinámica",
+  favicon: "/jquery-icono-32px.ico", // Ruta al favicon dinámico
+};
+
+
+---
+
+
+<MainLayout favicon={props.favicon} title="Galeria con jQuery">    
+    
+    <head>
+        <link rel="icon" type="image/svg+xml" href="/astro-logo-svg.svg" />
+    </head>
+
+    <GaleriaComponent />
+
+</MainLayout>
+
+
