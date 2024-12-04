@@ -1,0 +1,38 @@
+---
+
+
+//  ------------------------------------------------------------
+//  ----------  /astro-jquery-pruebas/  ------------------------
+//  ----------  /src/pages/galeria-efecto-flip.astro  ----------
+//  ------------------------------------------------------------
+
+
+import MainLayout from "../layouts/MainLayout.astro";
+import GaleriaEfectoFlipComponent from "../components/GaleriaEfectoFlipComponent.astro";
+
+
+const props = {
+  title: "Página dinámica",
+  favicon: "/jquery-icono-32px.ico", // Ruta al favicon dinámico
+};
+
+
+---
+
+
+<MainLayout favicon={props.favicon} title="Galeria Efecto Flip con jQuery">    
+    
+    <head>
+        <link rel="icon" type="image/svg+xml" href="/astro-logo-svg.svg" />
+    </head>
+
+    <h1> Galeria Efecto Flip con jQuery </h1>
+    <a href="./"> Home </a> <br> <br>
+    <a href="./galeria"> Galeria jQuery </a> <br> <br>
+    <a href="./galeria-efecto-flip"> Galeria Efecto Flip jQuery </a>
+
+    <GaleriaEfectoFlipComponent />
+
+</MainLayout>
+
+

@@ -2,7 +2,7 @@
 
 
 //  --------------------------------------------------------------
-//  ----------  /astro-jquery-pruebas  ---------------------------
+//  ----------  /astro-jquery-pruebas/  --------------------------
 //  ----------  /src/components/GaleriaComponent.astro  ----------
 //  --------------------------------------------------------------
 
@@ -12,9 +12,6 @@ import '../styles/jquery/galeria.css';
 
 ---
 
-
-<h1>Galeria con jQuery</h1>
-<a href="/"> Home </a>
 
 <main class="main">
     <section id="galeriaContainer">
@@ -68,13 +65,12 @@ import '../styles/jquery/galeria.css';
         
         if (location.pathname === '/galeria') {
             
-            console.warn('Iniciando galería...');
             jQueryGaleria();
 
             //  -----  Limpieza al salir  -----
             window.addEventListener('beforeunload', limpiarGaleria);
 
-        } else console.warn('No entra en Galería - Limpieza al Salir ', location.pathname);
+        } else console.warn('No entra en Galería - ruta: ', location.pathname);
     });
 
 </script>

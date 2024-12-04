@@ -1,0 +1,142 @@
+/*  ------------------------------------------------------------------  */
+/*  ----------  /astro-jquery-pruebas/  ------------------------------  */
+/*  ----------  /src/styles/jquery/galeria-efecto-flip.css  ----------  */
+/*  ------------------------------------------------------------------  */
+
+
+.main {
+    grid-area: main;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 725px;
+    padding: 50px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #222; */
+}
+
+.footer {
+    grid-area: footer;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border: 10px solid #B1B1B1;
+    color: #aaa;
+    background-color: #222;
+}
+
+
+/*  **********  Estilos Propios de la Galeria  **********  */
+
+#galeria {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    /* margin: 0 auto; */
+    padding: 50px;
+    background: linear-gradient(to bottom, #aaa, #eee, #aaa);
+}
+
+#foto {
+    width: auto;
+    display: flex;
+    cursor: pointer;
+}
+
+
+/*  *****  Añade la clase Dinamicamente  *****  */
+.img-foto {
+    width: 100%;
+    height: 100%;
+}
+
+
+.botonera {
+    /* width: 600px; */
+    width: 100%;
+    /* height: 140px; */
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #ffffff;
+}
+
+.boton {
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.botones:hover {
+    transform: scale(1.1);
+}
+
+
+/*  **********  RESPONSIVE  **********  */
+
+@media (max-width: 1200px) {
+
+    .header {
+        flex-direction: column;
+    }
+
+    #galeria {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .botonera {
+        width: 100%;
+        /* height: 70px; */
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #galeria {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .botonera {
+        width: 100%;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .botonera {
+        width: 100%;
+        height: 100px;
+        gap: 15px;
+        /* padding-bottom: 10px; */
+    }
+
+    .boton {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .botonera {
+        gap: 15px;
+        padding-bottom: 10px;
+    }
+
+    /* .boton {
+        width: 40px;
+        height: 25px;
+    } */
+}

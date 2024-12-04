@@ -1,0 +1,56 @@
+---
+
+
+//  ------------------------------------------------------------------------
+//  ----------  /astro-jquery-pruebas/  ------------------------------------
+//  ----------  /src/components/GaleriaCEfectoFlipomponent.astro  ----------
+//  ------------------------------------------------------------------------
+
+
+import '../styles/jquery/galeria-efecto-flip.css';
+
+
+---
+
+
+<main class="main">
+
+    <section id="galeria">
+
+        <!--  *****  Se renderiza la Galeria mediante el plugin  *****  -->
+
+        <!--  -----  Esto es lo que crea dinamicamente el plugin  -----
+        <div id="foto"> <img src="fondos/fondo1.jpg" width="600px" height='400px' /> </div>
+
+        <div class="botonera">
+
+            <div class="botones" id="inicio"> <img src="fondos/botones/inicio.png" width="50px" alt="inicio" height="40px" /> </div>
+            <div class="botones" id="atras"> <img alt="atrás" src="fondos/botones/atras.png" width="50px" height="40px" /> </div>
+            <div class="botones" id="play"> <img alt="play" src="fondos/botones/play.png" width="50px" height="40px" /> </div>
+            <div class="botones" id="stop"> <img alt="stop" src="fondos/botones/stop.png" width="50px" height="40px" /> </div>
+            <div class="botones" id="adelante"> <img alt="adelante" src="fondos/botones/adelante.png" width="50px" height="40px" /> </div>
+            <div class="botones" id="fin"> <img alt="último" src="fondos/botones/fin.png" width="50px" height="40px" /> </div>
+
+        </div>
+    -->
+
+    </section>
+
+</main>
+
+
+<script>
+    
+    import { jQueryGaleriaEfectoFlipScript } from '../scripts/jQueryGaleriaEfectoFlipScript';
+    
+    document.addEventListener('astro:page-load', () => {
+        
+        if (location.pathname === '/galeria-efecto-flip') {
+            
+            // console.warn('Iniciando galería efecto flip...');
+            jQueryGaleriaEfectoFlipScript();
+
+        } else console.warn('No entra en Galería efecto flip - ruta: ', location.pathname);
+    });
+
+</script>

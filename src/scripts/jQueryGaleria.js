@@ -100,7 +100,7 @@ function cambiaFoto() {
 export const jQueryGaleria = () => {
 
 
-    console.warn("---------- Documento Cargado ----------", "jQuery version:", $.fn.jquery);
+    console.warn("---------- jQueryGaleria Cargado ----------", "jQuery version:", $.fn.jquery);
 
     //  -----  Inicializar referencias HTML al DOM  -----
     $foto = $("#foto");
